@@ -118,8 +118,8 @@ var audio2;
     {
       audio2=blob;
 
-      PlayAudio(audio1+audio2);
-
+      PlayAudio(audio1);
+    PlayAudio(audio2);
     }
 
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
