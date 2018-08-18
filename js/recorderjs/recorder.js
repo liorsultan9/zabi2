@@ -122,7 +122,7 @@ if(audio1=== true){
     {
       audio2=blob;
 
-      ifPlayAudio(audio1)=audio1;
+      if PlayAudio(audio1)=audio1;
       else {
 
       }
