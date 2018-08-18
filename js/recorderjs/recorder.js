@@ -108,6 +108,10 @@ DEALINGS IN THE SOFTWARE.
 
 var audio1;
 var audio2;
+var playlist = new Array();
+playlist[0] = audio1;
+playlist[1] = audio2;
+
   Recorder.setupDownload = function(blob, filename){
     debugger;
     //save fist autdio
@@ -117,8 +121,7 @@ var audio2;
     {
       audio2=blob;
 
-      PlayAudio(audio1);
-      PlayAudio(audio2);
+      PlayAudio(playlist );
     }
 
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
