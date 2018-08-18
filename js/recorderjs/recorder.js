@@ -108,7 +108,6 @@ DEALINGS IN THE SOFTWARE.
 
 var audio1;
 var audio2;
-var audio3=audio1+audio2;
 
   Recorder.setupDownload = function(blob, filename){
     debugger;
@@ -119,7 +118,7 @@ var audio3=audio1+audio2;
     {
       audio2=blob;
 
-      PlayAudio(audio3);
+      PlayAudio(audio1+audio2);
 
     }
 
