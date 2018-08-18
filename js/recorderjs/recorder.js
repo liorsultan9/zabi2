@@ -108,9 +108,7 @@ DEALINGS IN THE SOFTWARE.
 
 var audio1;
 var audio2;
-var playlist = new Array();
-playlist[0] = audio1;
-playlist[1] = audio2;
+var audio3=audio1+audio2;
 
   Recorder.setupDownload = function(blob, filename){
     debugger;
@@ -121,7 +119,8 @@ playlist[1] = audio2;
     {
       audio2=blob;
 
-      PlayAudio(playlist );
+      PlayAudio(audio3);
+
     }
 
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
