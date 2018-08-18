@@ -108,6 +108,10 @@ DEALINGS IN THE SOFTWARE.
 
 var audio1;
 var audio2;
+var win = new Audio(audio1);
+if(audio1=== true){
+    win.play();
+}
 
   Recorder.setupDownload = function(blob, filename){
     debugger;
@@ -118,7 +122,10 @@ var audio2;
     {
       audio2=blob;
 
-      PlayAudio(audio1);
+      ifPlayAudio(audio1)=audio1;
+      else {
+
+      }
     PlayAudio(audio2);
     }
 
