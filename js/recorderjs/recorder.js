@@ -122,8 +122,8 @@ if(audio1=== true){
     {
       audio2=blob;
 
-   PlayAudio(audio1);
-    PlayAudio(audio2);
+   PlayAudioMany([audio1,audio2]);
+    //PlayAudio(audio2);
     }
 
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
@@ -141,4 +141,21 @@ function PlayAudio(blob)
   var blobURL = window.URL.createObjectURL(blob);
  var audio0 = new Audio(blobURL);
  audio0.play();
+}
+
+function PlayAudioMany(blobs)
+{
+  var myAudio;
+  for (var i = 0; i < blobs.length; i++) {
+    myAudio = new Audio(blobs[i]);
+    if(i<blobs.length-1)
+    {
+    myAudio.addEventListener('ended', function() {
+      Audio audio2=new Audio(blobs[i+1]);
+         audio2.play();
+    }, false);
+  }
+  }
+  myAudio.play();
+
 }
