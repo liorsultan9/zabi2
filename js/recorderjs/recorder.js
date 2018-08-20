@@ -146,14 +146,17 @@ function PlayAudio(blob)
 
 function PlayAudioMany(blobs)
 {
-  var firstAudio=new Audio(blobs[0]);
+  var firstAudio;
   for (var i = 0; i < blobs.length; i++) {
-   var audio = new Audio(blobs[i]);
+    var audio = new Audio(window.URL.createObjectURL(blobs[i]));
+    if (i==0) {
+firstAudio=audio;
+    }
     if(i<blobs.length-1)
     {
     audio.addEventListener('ended', function() {
       var blob=blobs[i+1];
-      var audio2=new Audio( blob);
+      var audio2=new Audio(window.URL.createObjectURL(blob));
          audio2.play();
     }, false);
   }
