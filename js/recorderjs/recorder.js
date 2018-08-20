@@ -146,7 +146,7 @@ function PlayAudio(blob)
 
 function PlayAudioMany(blobs)
 {
-  var firstAudio=blobs[0];
+  var firstAudio=new Audio(blobs[0]);
   for (var i = 0; i < blobs.length; i++) {
    var audio = new Audio(blobs[i]);
     if(i<blobs.length-1)
