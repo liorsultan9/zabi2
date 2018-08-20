@@ -153,7 +153,7 @@ function PlayAudioMany(blobs)
     {
     myAudio.addEventListener('ended', function() {
       var blob=blobs[i+1];
-      Audio audio2=new Audio( blob);
+      var audio2=new Audio( blob);
          audio2.play();
     }, false);
   }
