@@ -148,7 +148,7 @@ function PlayAudioMany(blobs)
 {
 var urls= [];
 for (let i = 0; i < blobs.length; i++) {
-   urls.add(window.URL.createObjectURL(blobs[i]));
+   urls.push(window.URL.createObjectURL(blobs[i]));
 }
 
   var firstAudio;
