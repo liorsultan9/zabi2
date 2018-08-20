@@ -114,7 +114,7 @@ if(audio1=== true){
 }
 
   Recorder.setupDownload = function(blob, filename){
-    debugger;
+
     //save fist autdio
     if(!audio1)
       audio1=blob;
@@ -123,7 +123,7 @@ if(audio1=== true){
       audio2=blob;
 
 debugger;
-   PlayAudioMany([audio1,audio2]);
+    PlayAudioMany([audio1,audio2]);
     //PlayAudio(audio2);
     }
 
@@ -152,11 +152,13 @@ function PlayAudioMany(blobs)
     if(i<blobs.length-1)
     {
     myAudio.addEventListener('ended', function() {
-      Audio audio2=new Audio(blobs[i+1]);
+      var blob=blobs[i+1];
+      Audio audio2=new Audio( blob);
          audio2.play();
     }, false);
   }
   }
   myAudio.play();
 
+for
 }
